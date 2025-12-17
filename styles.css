@@ -1,0 +1,220 @@
+/* MODE CLAIR */
+html:not(.dark) body {
+  background: #f5f7fa;
+  color: #1a1a1a;
+}
+
+.mouse-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 115, 255, 0.25),
+    rgba(255, 255, 255, 0.15),
+    transparent 60%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+}
+
+
+html:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .neon-outline {
+  border-color: rgba(2, 74, 131, 0.2);
+  box-shadow: 0 2px 20px rgba(2, 74, 131, 0.12);
+}
+
+html:not(.dark) .code-pill {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html:not(.dark) .text-white,
+html:not(.dark) .text-white\/60,
+html:not(.dark) .text-white\/70,
+html:not(.dark) .text-white\/80 {
+  color: #1a1a1a !important;
+}
+
+html:not(.dark) .bg-white\/3 {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .bg-white\/6 {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Animated tech grid background */
+:root {
+  --accent: #02b3ff; /* neon cyan accent */
+  --accent-2: #024A83; /* deep blue */
+  --card-bg: rgba(20, 25, 30, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.04);
+}
+
+body {
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(2, 179, 255, 0.04), transparent 6%),
+              radial-gradient(900px 300px at 90% 90%, rgba(2, 74, 131, 0.03), transparent 6%),
+              #0b0f14;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on;
+  
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-projets {
+  padding: 8px 12px;
+  background-color: #02b3ff;
+  color: black;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* subtle grid lines (tech look) */
+.tech-grid {
+  background-image:
+    linear-gradient(transparent 95%, rgba(255, 255, 255, 0.02) 95%),
+    linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.02) 95%);
+  background-size: 80px 80px, 80px 80px;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+
+/* glass cards */
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+}
+
+/* neon accent outline */
+.neon-outline {
+  box-shadow: 0 4px 30px rgba(2, 179, 255, 0.06), inset 0 0 18px rgba(2, 179, 255, 0.02);
+  border: 1px solid rgba(2, 179, 255, 0.08);
+}
+
+/* card hover glow */
+.glow-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(2, 179, 255, 0.06), 0 6px 14px rgba(0, 0, 0, 0.6);
+  transition: all 280ms cubic-bezier(.2, .9, .2, 1);
+}
+
+/* animated accent line under headers */
+.accent-underline {
+  display: inline-block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  width: 60px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* subtle floating squares animation in hero */
+.float-shape {
+  position: absolute;
+  border-radius: 8px;
+  filter: blur(10px);
+  opacity: 0.08;
+  animation: float 9s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { 
+    transform: translateY(0) translateX(0) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-24px) translateX(18px) rotate(6deg); 
+  }
+  100% { 
+    transform: translateY(0) translateX(0) rotate(0deg); 
+  }
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left {
+    transform: translateX(-40px);
+  }
+
+  .reveal-right {
+    transform: translateX(40px);
+  }
+
+  .reveal-left.active,
+  .reveal-right.active {
+    transform: translateX(0);
+  }
+
+  /* Animation de la ligne centrale */
+  .timeline-line {
+    height: 0;
+    transition: height 1.2s ease-out;
+  }
+
+  .timeline-line.active {
+    height: 100%;
+  }
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: all 650ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* monospace label style for tech lines */
+.code-pill {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
+  border: 1px solid rgba(87, 85, 85, 0.03);
+}
+
+/* image ring neon */
+.photo-ring {
+  box-shadow: 0 10px 30px rgba(2, 179, 255, 0.06), 0 0 30px rgba(2, 179, 255, 0.03) inset;
+  border: 3px solid rgba(255, 255, 255, 0.03);
+}
+
+/* small devices tweak */
+@media (max-width: 640px) {
+  .accent-underline { 
+    width: 40px; 
+  }
+}

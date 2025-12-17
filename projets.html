@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projets de Thomas Debbo, développeur fullstack.">
+  <title>Projets – Thomas Debbo</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/code.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="projets-styles.css">
+</head>
+
+<body class="min-h-screen antialiased text-gray-200">
+  
+  <div class="mouse-glow"></div>
+
+  <!-- NAV (même que index.html) -->
+  <nav class="fixed w-full z-50 top-4 left-0 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="./index.html#home" class="flex items-center gap-3 group">
+        
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-m uppercase tracking-wider text-white/70">
+        <nav class="flex gap-6 border-b border-blue-500/40 py-4 backdrop-blur-md">
+          <a href="./index.html#about" class="relative px-3 py-1 text-blue-600 transition group">
+            Page principale
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+          <a href="./index.html#contact" class="relative px-3 py-1 text-blue-600 transition group">
+            contact
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+
+          
+        </nav>
+
+        <button id="themeToggle" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition border border-black/100 flex items-center justify-center">
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05L5.636 5.636m12.728 0l-1.414 1.414M7.05 16.95l-1.414 1.414" />
+          </svg>
+
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="md:hidden">
+        <button id="mobileBtn" aria-label="menu" class="p-2 rounded bg-white/3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden mt-3 max-w-xs mx-auto glass rounded p-3">
+      <a href="./index.html#about" class="block py-2">À propos</a>
+      <a href="./index.html#skills" class="block py-2">Compétences</a>
+      <a href="./projets.html" class="block py-2">Projets</a>
+      <a href="./index.html#contact" class="block py-2">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Section Projets -->
+  <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <h1 class="text-center text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4">
+      Mes Projets
+    </h1>
+    <p class="text-center text-white/70 mb-12 max-w-2xl mx-auto">
+      Découvrez une sélection de mes réalisations en développement web, allant de sites vitrines à des applications interactives.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/cosygallery.png" alt="Générateur QR Code" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Site shopify</h2>
+          <p class="text-white/70 mt-2">Un site e-commerce professionnel, conçu sur Shopify, avec une interface moderne et une gestion simplifiée des produits et des commandes.</p>
+          <a href="https://cosygallery.fr/" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+      </div>
+      
+      <!-- Projet 1 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/le mozart.png" alt="Site web de restaurant" class="w-full h-48 object-cover">
+          
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Site web de restaurant</h2>
+          
+          <p class="text-white/70 mt-2">Un site vitrine immersif pour un restaurant "dans le noir" avec animations et design moderne.</p>
+          
+          <a href="https://27quentin.github.io/lemozard/index.html" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+        
+      </div>
+      
+
+      <!-- Projet 3 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/jeu de motus.png" alt="Jeu de Motus" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Jeu de Motus</h2>
+          <p class="text-white/70 mt-2">Un jeu amusant et éducatif réalisé en JavaScript avec interface interactive.</p>
+          <a href="https://thomasdeb961.github.io/jeu-de-motus/dict5.html" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/site-farahon.png" alt="Site startup" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Site complet d'une startup</h2>
+          <p class="text-white/70 mt-2">Site responsive codé en HTML, CSS, JavaScript et Tailwind CSS avec design professionnel.</p>
+          <a href="https://www.farahon.com/" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/wordpress.png" alt="Site WordPress" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Site WordPress : Avec et Pour le Mali</h2>
+          <p class="text-white/70 mt-2">Un site associatif solidaire, conçu sur WordPress et Elementor avec optimisation SEO.</p>
+          <a href="https://www.thomas-debbo.mds-lille.yt/mds/" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/QRcode.png" alt="qrcode" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Générateur de QR Codes</h2>
+          <p class="text-white/70 mt-2">Un site associatif solidaire, conçu sur WordPress et Elementor avec optimisation SEO.</p>
+          <a href="https://thomasdeb961.github.io/QR-code-generator/" target="_blank"
+             class="inline-block mt-4 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-2 rounded-lg font-semibold text-black hover:opacity-90 transition">
+            Voir le projet
+          </a>
+        </div>
+      </div>
+
+    <!-- Projet 2 -->
+      <div class="project-card reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+        <div class="relative">
+          <img src="./assets/images/site_e-commerce.png" alt="Site e-commerce" class="w-full h-48 object-cover">
+         
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold text-blue-400">Site e-commerce</h2>
+          <p class="text-white/70 mt-2">Une boutique en ligne complète réalisée en HTML, CSS et PHP avec gestion de panier.</p>
+          
+        </div>
+      </div>
+      
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white/50">
+      &copy; <span id="year"></span> Thomas Debbo — Tous droits réservés 
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="projets-script.js"></script>
+</body>
+</html>

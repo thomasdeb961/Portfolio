@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio de Thomas Debbo — Développeur Fullstack" />
+  <title>Thomas Debbo — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/code.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen antialiased text-gray-200">
+
+  <div class="mouse-glow"></div>
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 top-4 left-0 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-m uppercase tracking-wider text-white/70">
+        <nav class="flex gap-6 border-b border-blue-500/40 py-4 backdrop-blur-md">
+          <a href="#about" class="relative px-3 py-1 text-blue-600 transition group">
+            À propos
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+
+          <a href="#skills" class="relative px-3 py-1 text-blue-600 transition group">
+            Compétences
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+
+          <a href="#projects" class="relative px-3 py-1 text-blue-600 transition group">
+            Projets
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+
+          <a href="#contact" class="relative px-3 py-1 text-blue-600 transition group">
+            Contact
+            <span class="absolute inset-0 rounded-md border border-blue-500/0 group-hover:border-blue-500/70 transition-all duration-300 group-hover:shadow-[0_0_10px_2px_rgba(0,116,255,0.5)]"></span>
+          </a>
+        </nav>
+
+        <button id="themeToggle" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition border border-black/100 flex items-center justify-center">
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05L5.636 5.636m12.728 0l-1.414 1.414M7.05 16.95l-1.414 1.414" />
+          </svg>
+
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="md:hidden">
+        <button id="mobileBtn" aria-label="menu" class="p-2 rounded bg-white/3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden mt-3 max-w-xs mx-auto glass rounded p-3">
+      <a href="#about" class="block py-2">À propos</a>
+      <a href="#skills" class="block py-2">Compétences</a>
+      <a href="#projects" class="block py-2">Projets</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="relative overflow-hidden pt-24 pb-20">
+    <!-- floating shapes -->
+    <div class="absolute -left-8 -top-6 float-shape w-40 h-28 bg-gradient-to-r from-[#02b3ff] to-[#024A83] opacity-5 rotate-12"></div>
+    <div class="absolute right-6 top-12 float-shape w-28 h-20 bg-gradient-to-r from-[#02b3ff] to-[#6a4fbf] opacity-6 rotate-6"></div>
+
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Left: Intro -->
+        <div class="relative z-10">
+          <div class="reveal" style="transition-delay:120ms">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+              Thomas Debbo
+              <span class="block text-xl font-medium text-white/60 mt-2">Développeur Web — Front & Back</span>
+              <span class="block text-xl font-medium text-white/60 mt-2">Recherche d'Alternance</span>
+            </h1>
+
+            <div class="mt-6 max-w-xl text-white/80">
+              <p class="leading-relaxed">
+                
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="#projects" class="inline-flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-[#02b3ff] to-[#024A83] text-black rounded-lg font-medium shadow hover:scale-[1.02] transition">Voir mes projets</a>
+                <a href="#contact" class="px-5 py-3 border border-white/6 rounded-lg text-sm hover:bg-white/3 transition">Contactez-moi</a>
+                <a href="./assets/images/Capture d'écran cv .png" download="thomas-cv" class="px-4 py-3 bg-white/6 rounded-lg text-sm hover:bg-white/8 transition">Télécharger CV</a>
+              </div>
+
+              <div class="mt-6 flex gap-3 items-center text-sm text-white/60">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#02b3ff]" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h3.28a2 2 0 011.789 1.106L10.9 6H16a2 2 0 012 2v6a2 2 0 01-2 2h-1"/></svg>
+                <span>debbothomas54@gmail.com</span>
+                <span class="mx-2">•</span>
+                <span>07 45 55 01 61</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- small code-like block -->
+          <div class="mt-8 reveal glass p-4 rounded-lg neon-outline text-sm text-white/70" style="max-width:520px;">
+  <pre class="whitespace-pre-wrap"><code>// Ma journée type de dev
+git commit -m "ça marche sur ma machine ¯\_(ツ)_/¯"
+git push origin main
+// *prie en silence* 🙏
+</code></pre>
+</div>
+        </div>
+
+        <!-- Right: Photo + badges -->
+        <div class="relative">
+          <div class="reveal" style="transition-delay:180ms">
+            <div class="glass p-6 rounded-2xl neon-outline shadow-xl">
+              <div class="flex items-center gap-5">
+                <div class="w-32 h-32 rounded-full overflow-hidden photo-ring">
+                  <img src="./assets/images/DEBBO THOMAS 2025.JPG" alt="Photo Thomas" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <div class="text-lg font-semibold">Thomas Debbo</div>
+                  <div class="text-sm text-white/60">Apprenti Développeur Fullstack</div>
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-lg bg-white/3 text-sm">
+                  <div class="text-xs text-white/50">Années d'expérience</div>
+                  <div class="text-xl font-semibold">2+</div>
+                </div>
+                <div class="p-3 rounded-lg bg-white/3 text-sm">
+                  <div class="text-xs text-white/50">Disponibilité</div>
+                  <div class="text-xl font-semibold">Dès que possible</div>
+                </div>
+                <div class="p-3 rounded-lg bg-white/3 text-sm">
+                  <div class="text-xs text-white/50">Langues</div>
+                  <div class="text-xl font-semibold">FR . ENG . ARB . ESP </div>
+                </div>
+                <div class="p-3 rounded-lg bg-white/3 text-sm">
+                  <div class="text-xs text-white/50">Localisation</div>
+                  <div class="text-xl font-semibold">Lille</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- subtle tech grid overlay -->
+          <div class="absolute inset-0 pointer-events-none tech-grid rounded-2xl"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 -mt-12 relative z-10">
+    <!-- ABOUT -->
+    <section id="about" class="py-12">
+      <div class="reveal glass p-6 rounded-2xl neon-outline">
+        <div class="flex items-start gap-6 md:gap-10">
+          <div class="flex-1">
+            <h2 class="text-2xl font-semibold">Qui suis-je ? <span class="accent-underline"></span></h2>
+            <p class="mt-4 text-white/80 leading-relaxed">
+              Actuellement étudiant en Bachelor Développeur Web à <strong>MyDigitalSchool </strong>Lille, je conçois et développe des interfaces web soignées ainsi que des backends fiables et performants. J’apprécie le code propre, la collaboration et l’amélioration continue.
+              J'aide à construire des interfaces web performantes et des backends robustes. Je combine design fonctionnel et bonnes pratiques de code pour livrer des expériences fiables et modernes.
+            </p>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3 bg-white/3 rounded-md">
+                <div class="text-xs text-white/60">Formation</div>
+                <div class="font-medium">Bachelor — MyDigitalSchool</div>
+              </div>
+              <div class="p-3 bg-white/3 rounded-md">
+                <div class="text-xs text-white/60">Diplôme</div>
+                <div class="font-medium">Bac SE (sociaux-économique)</div>
+              </div>
+              
+              
+            </div>
+          </div>
+
+          <div class="w-40 hidden md:block">
+            <img src="./assets/images/7dcbd534a8015777822b053bb6986ba9.jpg" alt="Illustration" class="w-full rounded-lg shadow-lg object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+  <h2 class="text-3xl font-bold text-center mb-10 reveal">Mon Parcours</h2>
+
+  <div class="relative w-full max-w-4xl mx-auto">
+
+    <!-- Ligne verticale animée -->
+    <div class="absolute left-1/2 top-0 w-1 bg-blue-500 -translate-x-1/2 timeline-line"></div>
+
+
+    <!-- EVENT 4 (right) -->
+    <div class="relative flex items-center mb-16 reveal reveal-right">
+      <div class="w-1/2"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2 pl-8">
+        <h3 class="font-semibold text-lg">Bénévolat – Scouts / Aide humanitaire</h3>
+        <p class="text-white/70 text-sm">Engagement, esprit d’équipe et sens des responsabilités.</p>
+      </div>
+    </div>
+
+    <!-- EVENT 1 (left) -->
+    <div class="relative flex items-center mb-16 reveal reveal-left">
+      <div class="w-1/2 pr-8 text-right">
+        <h3 class="font-semibold text-lg">Projets web personnels & scolaires</h3>
+        <p class="text-white/70 text-sm">Création de sites web responsives, portfolio, site associatif et projets e-commerce.</p>
+      </div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2"></div>
+    </div>
+
+    <!-- EVENT 2 (right) -->
+    <div class="relative flex items-center mb-16 reveal reveal-right">
+      <div class="w-1/2"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2 pl-8">
+        <h3 class="font-semibold text-lg">Stage Développement Web – Farahon</h3>
+        <p class="text-white/70 text-sm">Développement front-end, intégration Tailwind CSS, optimisation UI/UX.</p>
+      </div>
+    </div>
+
+    <!-- EVENT 3 (left) -->
+    <div class="relative flex items-center mb-16 reveal reveal-left">
+      <div class="w-1/2 pr-8 text-right">
+        <h3 class="font-semibold text-lg">Employé polyvalent – Supermarché</h3>
+        <p class="text-white/70 text-sm">Relation client, autonomie, travail en équipe.</p>
+      </div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2"></div>
+    </div>
+
+    <!-- EVENT 2 (right) -->
+    <div class="relative flex items-center mb-16 reveal reveal-right">
+      <div class="w-1/2"></div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2 pl-8">
+        <h3 class="font-semibold text-lg">Employé – Restaurant libanais</h3>
+        <p class="text-white/70 text-sm">Service, relation client, rigueur et travail en équipe.</p>
+      </div>
+    </div>
+
+    <!-- EVENT 3 (left) -->
+    <div class="relative flex items-center mb-16 reveal reveal-left">
+      <div class="w-1/2 pr-8 text-right">
+        <h3 class="font-semibold text-lg">(Aujourd'hui) Alternance chez HUGGII – Développement Web</h3>
+        <p class="text-white/70 text-sm">Développement de fonctionnalités web, intégration front-end et maintenance de sites.</p>
+      </div>
+      <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-[#061627] z-10"></div>
+      <div class="w-1/2"></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold">Compétences <span class="accent-underline"></span></h2>
+        <div class="text-sm text-white/60">Synthèse par domaine — sans barres</div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill card template -->
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-[#02b3ff] border border-white/6">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+       class="w-6 h-6 text-[#061627]" 
+       fill="none" viewBox="0 0 24 24" 
+       stroke="currentColor">
+      <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="2" 
+          d="M3 7v10c0 1.1.9 2 2 2h14M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2"/>
+        </svg>
+      </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Front-end</h4>
+                <div class="text-xs text-white/60">UI • Responsive</div>
+              </div>
+              <p class="text-sm text-white/70 mt-2">HTML • CSS • JavaScript • Tailwind — Création d'interfaces accessibles et performantes.</p>
+
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">HTML</span>
+                <span class="code-pill">CSS</span>
+                <span class="code-pill">Tailwind</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#061627] to-[#072033] border border-white/6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#02b3ff]" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h3.28a2 2 0 011.789 1.106L10.9 6H16a2 2 0 012 2v6a2 2 0 01-2 2h-1"/></svg>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Back-end</h4>
+                <div class="text-xs text-white/60">API • DB</div>
+              </div>
+              <p class="text-sm text-white/70 mt-2">PHP • PostgreSQL • Conception d'APIs et logique serveur.</p>
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">PHP</span>
+                <span class="code-pill">Postgres</span>
+                <span class="code-pill">REST</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#061627] to-[#072033] border border-white/6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#02b3ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"/></svg>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">CMS & No-code</h4>
+                <div class="text-xs text-white/60">WordPress</div>
+              </div>
+              <p class="text-sm text-white/70 mt-2">Création de sites vitrines, intégrations Elementor et optimisation SEO de base.</p>
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">WP</span>
+                <span class="code-pill">Elementor</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#061627] to-[#072033] border border-white/6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#02b3ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 17v-6h6v6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Frameworks</h4>
+                <div class="text-xs text-white/60">Tailwind • React</div>
+              </div>
+              <p class="text-sm text-white/70 mt-2">Prototypage rapide avec Tailwind, notions de React pour composants réutilisables.</p>
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">Tailwind</span>
+                <span class="code-pill">React</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#061627] to-[#072033] border border-white/6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#02b3ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Outils</h4>
+                <div class="text-xs text-white/60">Git • Figma</div>
+              </div>
+              <p class="text-sm text-white/70 mt-2">Git pour versionning et Figma pour design & prototypage collaboratif.</p>
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">Git</span>
+                <span class="code-pill">Figma</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass p-5 rounded-2xl neon-outline glow-hover">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-[#061627] to-[#072033] border border-white/6">
+              <!-- Icône SQL / Base de données -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#02b3ff]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C7.589 2 4 3.791 4 6v12c0 2.209 3.589 4 8 4s8-1.791 8-4V6c0-2.209-3.589-4-8-4zm0 2c3.308 0 6 .895 6 2s-2.692 2-6 2-6-.895-6-2 2.692-2 6-2zm0 16c-3.308 0-6-.895-6-2v-2.1c1.58 1.012 4.014 1.6 6 1.6s4.42-.588 6-1.6V18c0 1.105-2.692 2-6 2zm0-6c-3.308 0-6-.895-6-2v-2.1c1.58 1.012 4.014 1.6 6 1.6s4.42-.588 6-1.6V12c0 1.105-2.692 2-6 2z"/>
+              </svg>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Bases de données</h4>
+                <div class="text-xs text-white/60">SQL • Modélisation</div>
+              </div>
+
+              <p class="text-sm text-white/70 mt-2">
+                SQL • Conception de bases de données • Modélisation relationnelle • Requêtes complexes (JOIN, fonctions, agrégations).
+              </p>
+
+              <div class="mt-3 flex gap-2">
+                <span class="code-pill">SQL</span>
+                <span class="code-pill">PostgreSQL</span>
+                <span class="code-pill">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-12">
+      <div class="flex items-center justify-between mb-6">
+        <h5 class="text-2xl font-semibold">Projets <span class="accent-underline"></span></h2>
+        
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card -->
+        <article class="reveal glass rounded-2xl overflow-hidden shadow-lg glow-hover">
+          <div class="relative">
+            <img src="./assets/images/le mozart.png" alt="Projet Le Mozart" class="w-full h-44 object-cover">
+            <div class="absolute left-4 bottom-4 bg-black/50 px-3 py-2 rounded-md text-xs">HTML • CSS • PHP</div>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold">Le Mozart — Restaurant</h4>
+            <p class="text-sm text-white/70 mt-2">Site vitrine & réservation réalisé en HTML/CSS/JS & PHP — optimisation responsive.</p>
+            <div class="mt-4 flex gap-2">
+              
+              <a href="projets.html" class="px-3 py-2 bg-[#02b3ff] text-black rounded-md text-sm">Voir</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass rounded-2xl overflow-hidden shadow-lg">
+          <img src="./assets/images/site-farahon.png" alt="Portfolio refonte" class="w-full h-44 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Refonte Portfolio</h4>
+            <p class="text-sm text-white/70 mt-2">Refonte en Tailwind, animations, design moderne.</p>
+            <div class="mt-4">
+              <a href="projets.html" class="px-3 py-2 bg-[#02b3ff] text-black rounded-md text-sm">Voir</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="reveal glass rounded-2xl overflow-hidden shadow-lg">
+          <img src="./assets/images/home.jpg" alt="Landing" class="w-full h-44 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Landing page</h4>
+            <p class="text-sm text-white/70 mt-2">Landing responsive pour campagne marketing.</p>
+            <div class="mt-4">
+              <a href="projets.html" class="px-3 py-2 bg-[#02b3ff] text-black rounded-md text-sm">Voir</a>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    <div class="btn-container">
+  <a href="projets.html" class="btn-projets">Voir tous les projets</a>
+</div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="reveal glass p-6 rounded-2xl neon-outline">
+          <h2 class="text-2xl font-semibold">Besoin d’un dev (sympa) ? <span class="accent-underline"></span></h2>
+          <p class="mt-3 text-white/80">Un projet, un stage ou une alternance en tête ? Parlons-en ! J’adore relever des défis techniques, construire des choses qui servent vraiment… et boire un café en debuggeant (ça aide, promis).</p>
+
+          <div class="mt-4 text-sm text-white/70">
+            <p>✉️ <a href="mailto:debbothomas54@gmail.com" class="underline">debbothomas54@gmail.com</a></p>
+            <p class="mt-1">📞 07 45 55 01 61</p>
+            <p class="mt-3">🔗 <a href="https://www.linkedin.com/in/thomas-debbo/" target="_blank" class="underline">LinkedIn</a></p>
+          </div>
+        </div>
+
+        <form action="https://formsubmit.co/debbothomas54@gmail.com" method="POST" class="reveal glass p-6 rounded-2xl space-y-4 neon-outline">
+          <div class="grid sm:grid-cols-2 gap-3">
+            <input name="fullName" required placeholder="Nom Prénom" class="p-3 rounded bg-transparent border border-white/6 text-sm" />
+            <input name="phone" required placeholder="Téléphone" class="p-3 rounded bg-transparent border border-white/6 text-sm" />
+          </div>
+          <input type="email" name="email" required placeholder="Email" class="w-full p-3 rounded bg-transparent border border-white/6 text-sm" />
+          <input name="subject" required placeholder="Objet" class="w-full p-3 rounded bg-transparent border border-white/6 text-sm" />
+          <textarea name="message" rows="6" required placeholder="Message" class="w-full p-3 rounded bg-transparent border border-white/6 text-sm"></textarea>
+
+          <div class="flex items-center justify-between">
+            <button type="submit" class="px-5 py-2 bg-[#02b3ff] text-black rounded-md font-medium">Envoyer</button>
+            <div class="text-xs text-white/60">Je réponds rapidement — merci !</div>
+          </div>
+
+          <input type="hidden" name="_captcha" value="false" />
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white/50">
+      &copy; <span id="year"></span> Thomas Debbo — Tous droits réservés 
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

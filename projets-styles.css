@@ -1,0 +1,70 @@
+/* Styles spécifiques pour la page projets */
+
+.mouse-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 116, 255, 0.25),
+    rgba(240, 165, 0, 0.15),
+    transparent 60%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+}
+
+
+
+/* Animation d'entrée pour les cartes de projets */
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Style pour les tags de technologies */
+.project-card .absolute {
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Animation au hover sur les boutons */
+.project-card a {
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.project-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Effet de brillance sur les images */
+.project-card img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 1rem;
+  }
+  
+  main h1 {
+    font-size: 2.5rem;
+  }
+}
