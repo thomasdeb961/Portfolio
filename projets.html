@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Thomas Debbo, Développeur Fullstack. Découvrez mes projets et compétences.">
+    <title>Portfolio de Thomas Debbo</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/code.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<section id="home">
+    <header class="bg-blue-600 text-white p-6"style="margin-top: -3em;" >
+        <nav id="navbar" class="fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-50 bg-black/80 px-4 py-3 transition">
+          <div class="flex justify-between items-center">
+            <!-- Logo ou nom -->
+            <h1 class="text-xl font-bold">Thomas</h1>
+      
+            <!-- Bouton burger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+      
+            <!-- Menu normal (desktop) -->
+            <ul class="hidden md:flex space-x-6 text-lg uppercase font-medium" >
+              <li><a href="./index.html" class="hover:text-yellow-400">Accueil</a></li>
+              <li><a href="./index.html" class="hover:text-yellow-400">Découvrez-moi</a></li>
+              <li><a href="./index.html" class="hover:text-yellow-400">Mes compétences</a></li>
+              <li><a href="./index.html" class="hover:text-yellow-400">Contactez-moi</a></li>
+            </ul>
+          </div>
+      
+          <!-- Menu mobile -->
+          <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-4 mt-4 text-center text-lg uppercase font-medium">
+            <li><a href="./index.html" class="hover:text-yellow-400">Accueil</a></li>
+            <li><a href="./index.html" class="hover:text-yellow-400">Découvrez-moi</a></li>
+            <li><a href="./index.html" class="hover:text-yellow-400">Mes compétences</a></li>
+            <li><a href="./index.html" class="hover:text-yellow-400">Contactez-moi</a></li>
+          </ul>
+        </nav>
+      
+        <!-- Ton contenu existant -->
+        <div class="flex flex-col md:flex-row items-center justify-center mt-40 gap-8" id="home_page_wrapper">
+          <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+            <img src="./assets/images/thomas.jpg" alt="Photo de profil Thomas Debbo" class="w-full h-full object-cover">
+          </div>
+      
+          <div id="home_page" class="text-center md:text-left">
+            <h1 class="text-4xl font-bold">Thomas Debbo</h1>
+            <h2 class="text-2xl mt-2">Apprenti Développeur Fullstack</h2>
+            <h2 class="text-2xl mt-2">Je cherche une alternance en développement web à partir de <br>septembre, pour deux ans.</h2>
+          </div>
+        </div>
+      
+        <script>
+          const btn = document.getElementById('menu-btn');
+          const menu = document.getElementById('mobile-menu');
+      
+          btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+          });
+      
+          // Réduction d’opacité au scroll
+          window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('bg-black/60', window.scrollY > 10);
+          });
+        </script>
+      </header>
+
+    <main class="py-12">
+        <section class="text-center">
+            <h1 class="text-4xl font-semibold text-blue-800">Mes Projets</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 px-4">
+
+                <!-- Projet 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 1 : site web restaurant</h2>
+                    <p class="text-gray-700">Un site vitrine d'un restaurant dans le noir.</p>
+                    <img src="./assets/images/le mozart.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="https://27quentin.github.io/lemozard/index.html" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet</a>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 2 : Site e-commerce</h2>
+                    <p class="text-gray-700">Création d'une boutique en ligne en HTML, CSS et PHP.</p>
+                    <img src="./assets/images/site_e-commerce.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="http://localhost/projet_grp_php/cart.php" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet</a>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 3 : Jeu de Motus</h2>
+                    <p class="text-gray-700">Développement d’un jeu pour s’amuser et apprendre.</p>
+                    <img src="./assets/images/jeu de motus.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="https://thomasdeb961.github.io/jeu-de-motus/dict5.html" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet</a>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 4 : site complet d'une startup</h2>
+                    <p class="text-gray-700">Un blog responsive codé en HTML/CSS/JS/Ruby/Tailwind CSS</p>
+                    <img src="./assets/images/site-farahon.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="http://127.0.0.1:5501/My-digital-school-front-main/index.html" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet</a>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 5 : Site WordPress (Avec et Pour le Mali)</h2>
+                    <p class="text-gray-700">Site d'une association solidaire.</p>
+                    <img src="./assets/images/wordpress.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="https://www.thomas-debbo.mds-lille.yt/mds/" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet</a>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <h2 class="text-xl font-semibold text-gray-900">Projet 6 : Générateur des QR codes</h2>
+                    <p class="text-gray-700">Codé en JS, HTML et CSS.</p>
+                    <img src="assets/images/QRcode.png" alt="Aperçu du projet" class="mt-4 w-full h-48 object-cover rounded-md">
+                    <a href="https://thomasdeb961.github.io/QR-code-generator/" target="_blank"
+                    class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700  hover:scale-105 transform transition duration-300 ease-in-out font-medium">
+                    Voir le projet
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-700 text-white py-4">
+        <p class="text-center">&copy; 2026 Thomas Debbo. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Thomas Debbo, Développeur Fullstack. Découvrez mes projets et compétences.">
+    <title>Portfolio de Thomas Debbo</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/code.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<section id="home">
+    <header class="bg-blue-600 text-white p-6" style="margin-top: -3em;">
+        <nav id="navbar" class="fixed top-0 left-1/2 transform -translate-x-1/2 w-full z-50 bg-black/80 px-4 py-3 transition">
+          <div class="flex justify-between items-center">
+            <!-- Logo ou nom -->
+            <h1 class="text-xl font-bold">Thomas</h1>
+      
+            <!-- Bouton burger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+      
+            <!-- Menu normal (desktop) -->
+            <ul class="hidden md:flex space-x-6 text-lg uppercase font-medium">
+              <li><a href="#home" class="hover:text-yellow-400">Accueil</a></li>
+              <li><a href="#about" class="hover:text-yellow-400">Découvrez-moi</a></li>
+              <li><a href="#skills" class="hover:text-yellow-400">Mes compétences</a></li>
+              <li><a href="#contact" class="hover:text-yellow-400">Contactez-moi</a></li>
+              <li><a href="projets.html" class="hover:text-yellow-400">Mes Projets</a></li>
+            </ul>
+          </div>
+      
+          <!-- Menu mobile -->
+          <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-4 mt-4 text-center text-lg uppercase font-medium">
+            <li><a href="#home" class="hover:text-yellow-400">Accueil</a></li>
+            <li><a href="#about" class="hover:text-yellow-400">Découvrez-moi</a></li>
+            <li><a href="#skills" class="hover:text-yellow-400">Mes compétences</a></li>
+            <li><a href="#contact" class="hover:text-yellow-400">Contactez-moi</a></li>
+            <li><a href="projets.html" class="hover:text-yellow-400">Mes Projets</a></li>
+          </ul>
+        </nav>
+      
+        <!-- Ton contenu existant -->
+        <div class="flex flex-col md:flex-row items-center justify-center mt-40 gap-8" id="home_page_wrapper">
+          <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+            <img src="./assets/images/thomas.jpg" alt="Photo de profil Thomas Debbo" class="w-full h-full object-cover">
+          </div>
+      
+          <div id="home_page" class="text-center md:text-left">
+            <h1 class="text-4xl font-bold">Thomas Debbo</h1>
+            <h2 class="text-2xl mt-2">Apprenti Développeur Fullstack</h2>
+            <h2 class="text-2xl mt-2">Je cherche une alternance en développement web à partir de <br>septembre, pour deux ans.</h2>
+          </div>
+        </div>
+      
+        <script>
+          const btn = document.getElementById('menu-btn');
+          const menu = document.getElementById('mobile-menu');
+      
+          btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+          });
+      
+          // Réduction d’opacité au scroll
+          window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('bg-black/60', window.scrollY > 10);
+          });
+        </script>
+      </header>
+
+<main class="py-16">
+    <section id="about" class="px-6">
+        <section id="presentation" class="flex flex-col lg:flex-row gap-8">
+            <div class="box-text lg:w-1/2">
+                <h2 class="text-3xl font-semibold mb-4">Qui suis-je ?</h2>
+                <p class="text-lg">
+                    J’ai 18 ans, je viens du Liban, et après un <b>Bac en Sciences Économiques et Sociales</b>,
+                    je suis maintenant en Bachelor Développeur Web chez <b>MyDigitalSchool Lille</b>.<br><br>
+                    <b class="font-bold">Mon objectif ?</b> Trouver une alternance afin de travailler sur des projets innovants et pérennes.<br><br>
+                    <b>Mes outils de prédilection ?</b> HTML, CSS, PHP, JavaScript, PopSQL, Github, Suite Adobe, Figma,
+                    sans oublier WordPress avec Elementor. Je travaille aussi bien sur le front-end que sur le back-end et je suis toujours prêt à apprendre.<br><br>
+                    En dehors de ma formation, je suis fan de sport (Chess, musculation, Paddle, course), de tech (création de sites web).
+                </p>
+            </div>
+            <div class="box-image lg:w-1/2">
+                <img src="./assets/images/7dcbd534a8015777822b053bb6986ba9.jpg" alt="Image de Thomas Debbo" class="w-full rounded-lg shadow-lg">
+            </div>
+        </section>
+    </section>
+
+    <section id="skills" class="bg-gray-100 py-16 px-6">
+        <h2 class="text-3xl font-semibold mb-6">Mes Compétences</h2>
+        <p class="text-lg mb-8">Depuis toujours passionné par l’informatique, j’ai développé au fil des années un ensemble de
+        compétences solides, que ce soit grâce à mes études ou à mes projets personnels. Voici un aperçu des compétences que je serais heureux de mettre à votre service :</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-2">FRONT-END</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-lg">HTML</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg">CSS</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg">JavaScript</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2">BACK-END</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-lg">PHP</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg">PostgreSQL</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-lg">Ruby</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-2">CMS</h3>
+                <div>
+                    <p class="text-lg">WordPress</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
+            <h3 class="text-xl font-semibold mb-2">FRAMEWORKS</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="text-lg">Tailwind CSS</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-lg">React JS</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Programmes</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="text-lg">Python</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Maquettage</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="text-lg">Figma</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-lg">Suite Adobe</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="mt-16 flex flex-col items-center justify-center text-center">
+            <!-- Aperçu du CV -->
+            <img src="./assets/images/Capture d'écran cv .png" alt="CV de Thomas Debbo" class="w-full max-w-md rounded shadow-lg mb-4">
+        
+            <!-- Bouton de téléchargement -->
+            <a href="./assets/images/Capture d'écran cv .png" download="thomas-cv"
+               class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition duration-300">
+                Télécharger mon CV
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6">
+        <h2 class="text-3xl font-semibold mb-6">Travaillez avec moi !</h2>
+        <p class="text-lg mb-6">Mon profil vous intéresse ? Vous avez un projet à me confier ? N’hésitez pas à me contacter pour en discuter. Je suis disponible pour un entretien, un appel ou un échange par mail. À très vite !</p>
+
+        <p><strong>Email :</strong> debbothomas54@gmail.com</p>
+        <p><strong>Téléphone :</strong> 07 45 55 01 61</p>
+
+        <div class="mt-4 flex items-center space-x-4">
+            <a href="https://www.linkedin.com/in/thomas-debbo/" target="_blank">
+                <img src="./assets/images/linkedin.svg" alt="LinkedIn" width="35">
+            </a>
+        </div>
+
+        <div class="mt-8">
+            <h3 class="text-2xl font-semibold mb-4">Contactez-moi</h3>
+            <form action="https://formsubmit.co/debbothomas54@gmail.com" method="POST" id="contactForm" class="space-y-4">
+                <input type="text" name="fullName" required placeholder="Nom Prénom" class="w-full p-3 rounded border border-gray-300">
+                <input type="tel" name="phone" required placeholder="Téléphone" class="w-full p-3 rounded border border-gray-300">
+                <input type="email" required placeholder="Email" class="w-full p-3 rounded border border-gray-300">
+                <input type="text" name="name" required placeholder="Objet" class="w-full p-3 rounded border border-gray-300">
+                <textarea id="message" name="text" class="w-full p-3 rounded border border-gray-300" rows="6" required placeholder="Message"></textarea>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white text-lg px-9 py-2 rounded-xl mt-4 shadow-md transition-all duration-300">
+                    Envoyer
+                  </button>
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-blue-700 text-white py-4">
+    <p class="text-center">&copy; 2026 Thomas Debbo. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
